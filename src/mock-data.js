@@ -5,6 +5,7 @@ export const internalNews = [
       "https://img.huffingtonpost.com/asset/610d3924410000a3a681d670.jpeg?cache=GWda0XPPZI&ops=368_207&format=webp",
     title: "Breonna Taylors'city is in crisis",
     description: "After months of planning 1 year-old's party",
+    url: "#",
   },
   {
     id: 2,
@@ -13,6 +14,7 @@ export const internalNews = [
     title: "Yelp Will Let You Search For Businesses That Require Vaccination",
     description:
       "The site will note which establishments require their workers to be vaccinated and which require people entering to be vaccinated.",
+    url: "#",
   },
   {
     id: 3,
@@ -22,6 +24,7 @@ export const internalNews = [
       "Amazon Broke Law And Should Face New Union Election, Labor Official Finds",
     description:
       "A hearing examiner for the National Labor Relations Board said Amazon tainted the election process enough to warrant a do-over.",
+    url: "#",
   },
 ];
 
