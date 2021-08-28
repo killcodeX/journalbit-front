@@ -40,7 +40,7 @@ export default function Profile() {
     }
   };
 
-  if(!User.avatar){
+  if(!User || !User.avatar){
     return <span>Loading...</span>
   }
 
