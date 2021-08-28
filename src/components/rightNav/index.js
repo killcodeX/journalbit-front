@@ -17,7 +17,7 @@ import { AiFillRead } from "react-icons/ai";
 import { internalNews } from "../../mock-data";
 
 export default function RightNav() {
-  const [news, setNews] = useState([]);
+  const [news, setNews] = useState([...internalNews]);
 
   useEffect(() => {
     const getNews = async () => {
