@@ -19,20 +19,20 @@ import { internalNews } from "../../mock-data";
 export default function RightNav() {
   const [news, setNews] = useState([...internalNews]);
 
-  useEffect(() => {
-    const getNews = async () => {
-      fetch('https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=42fd351281504e8c905ffdc9063ddfbc')
-      .then(res => res.json())
-      .then(res => {
-        setNews(res.articles)
-      })
-      .catch(err => {
-        console.log(err)
-      })
-    }
+  // useEffect(() => {
+  //   const getNews = async () => {
+  //     fetch('https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=42fd351281504e8c905ffdc9063ddfbc')
+  //     .then(res => res.json())
+  //     .then(res => {
+  //       setNews(res.articles)
+  //     })
+  //     .catch(err => {
+  //       console.log(err)
+  //     })
+  //   }
 
-    getNews()
-  }, [])
+  //   getNews()
+  // }, [])
 
   if(!news || news.length == 0){
     return <span>Loading...</span>
