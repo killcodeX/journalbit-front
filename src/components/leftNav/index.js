@@ -57,7 +57,7 @@ export default function LeftNav() {
         </CardWrapper>
       </FirstWrapper>
 
-      <SecondWrapper position={positionY > 400 ? "fixed" : "inherit"}>
+      <SecondWrapper position={positionY > 400 ? "inherit" : "inherit"}>
         <CardWrapper className="mt-4">
           <CardHeader>
             <TitleWrapper>
