@@ -1,12 +1,12 @@
 import * as Yup from "yup";
 
-const url =
-  /^((http|https):\/\/)?(www.)?(?!.*(http|https|www.))[a-zA-Z0-9_-]+(\.[a-zA-Z]+)+(\/)?.([\w\?[a-zA-Z-_%\/@?]+)*([^\/\w\?[a-zA-Z0-9_-]+=\w+(&[a-zA-Z0-9_]+=\w+)*)?$/;
+const url =/[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?/gi;
+var urlChecker = new RegExp(url);
 
 const facebookUrl =
-/(?:https?:\/\/)?(?:www\.)?(mbasic.facebook|m\.facebook|facebook|fb)\.(com|me)\/(?:(?:\w\.)*#!\/)?(?:pages\/)?(?:[\w\-\.]*\/)*([\w\-\.]*)/ig;
+  /(?:https?:\/\/)?(?:www\.)?(mbasic.facebook|m\.facebook|facebook|fb)\.(com|me)\/(?:(?:\w\.)*#!\/)?(?:pages\/)?(?:[\w\-\.]*\/)*([\w\-\.]*)/gi;
 
-const commentReg = /^[a-zA-Z ]+$/
+const commentReg = /^[a-zA-Z ]+$/;
 
 export const RegistrationSchema = Yup.object().shape({
   fname: Yup.string()
@@ -31,8 +31,14 @@ export const LoginSchema = Yup.object().shape({
 });
 
 export const AccountSchema = Yup.object().shape({
-  fname: Yup.string().min(2, "Too Short!").max(10, "Too Long!").required("Required"),
-  lname: Yup.string().min(2, "Too Short!").max(10, "Too Long!").required("Required"),
+  fname: Yup.string()
+    .min(2, "Too Short!")
+    .max(10, "Too Long!")
+    .required("Required"),
+  lname: Yup.string()
+    .min(2, "Too Short!")
+    .max(10, "Too Long!")
+    .required("Required"),
   work: Yup.string().required("Required"),
   city: Yup.string().required("Required"),
   bio: Yup.string().required("Required"),
@@ -42,16 +48,14 @@ export const AccountSchema = Yup.object().shape({
   facebook: Yup.string().matches(facebookUrl, "Enter facebook correct url!"),
 });
 
-
 export const PostSchema = Yup.object().shape({
-  url: Yup.string().matches(url, "Enter only url!").required("Required"),
+  url: Yup.string().matches(urlChecker, "Enter only url!").required("Required"),
   topic: Yup.string().required("Required"),
 });
 
 export const CommentSchema = Yup.object().shape({
   topic: Yup.string().required("Required"),
 });
-
 
 //profession: Yup.string().required('Choose one'),
 //confirmPassword: Yup.string().oneOf([Yup.ref('password'), null], 'Passwords must match'),
