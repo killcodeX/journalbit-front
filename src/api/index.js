@@ -8,7 +8,9 @@ const openNotificationWithIcon = (type, title, message) => {
   });
 };
 
-export const ApiFunc = axios.create({ baseURL: "http://localhost:5000" });
+const url =  process.env.NODE_ENV === "development"? "http://localhost:5000" : "https://journal-bit-back.vercel.app"
+
+export const ApiFunc = axios.create({ baseURL: url });
 
 ApiFunc.interceptors.request.use((req) => {
   if (localStorage.getItem("journaltoken")) {
