@@ -8,8 +8,7 @@ const openNotificationWithIcon = (type, title, message) => {
   });
 };
 
-
-export const ApiFunc = axios.create({ baseURL: process.env.NODE_ENV ==='development'? "http://localhost:5000": "https://journal-bit-back.vercel.app" });
+export const ApiFunc = axios.create({ baseURL: "http://localhost:5000" });
 
 ApiFunc.interceptors.request.use((req) => {
   if (localStorage.getItem("journaltoken")) {
@@ -85,7 +84,6 @@ export const getUser = async (id) => {
 };
 
 export const getAllUser = async () => {
-  console.log('called for all usr')
   try {
     const { data }  = await ApiFunc.get(`/journalbit/get-all-user`);
     return data

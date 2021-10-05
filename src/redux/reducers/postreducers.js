@@ -67,6 +67,7 @@ const PostReducer = (state = initialState, action) => {
       };
 
       // for only user posts
+
       const newUserPostData = [...state.userPost];
       const userpostIndexData = newUserPostData.findIndex(
         (post) => post._id == action.post._id

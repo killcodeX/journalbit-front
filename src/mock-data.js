@@ -1,73 +1,68 @@
 export const internalNews = [
   {
     id: 1,
-    urlToImage:
+    image:
       "https://img.huffingtonpost.com/asset/610d3924410000a3a681d670.jpeg?cache=GWda0XPPZI&ops=368_207&format=webp",
-    title: "Breonna Taylors'city is in crisis",
-    description: "After months of planning 1 year-old's party",
-    url: "#",
+    heading: "Breonna Taylors'city is in crisis",
+    desc: "After months of planning 1 year-old's party",
   },
   {
     id: 2,
-    urlToImage:
+    image:
       "https://img.huffingtonpost.com/asset/610c096e41000002a181d51a.jpeg?cache=ox6pgoykfg&ops=scalefit_720_noupscale",
-    title: "Yelp Will Let You Search For Businesses That Require Vaccination",
-    description:
-      "The site will note which establishments require their workers to be vaccinated and which require people entering to be vaccinated.",
-    url: "#",
+    heading: "Yelp Will Let You Search For Businesses That Require Vaccination",
+    desc: "The site will note which establishments require their workers to be vaccinated and which require people entering to be vaccinated.",
   },
   {
     id: 3,
-    urlToImage:
+    image:
       "https://img.huffingtonpost.com/asset/610314392600005d84524416.jpg?ops=scalefit_720_noupscale",
-    title:
+    heading:
       "Amazon Broke Law And Should Face New Union Election, Labor Official Finds",
-    description:
-      "A hearing examiner for the National Labor Relations Board said Amazon tainted the election process enough to warrant a do-over.",
-    url: "#",
+    desc: "A hearing examiner for the National Labor Relations Board said Amazon tainted the election process enough to warrant a do-over.",
   },
 ];
 
 export const topics = [
   {
     id: 1,
-    name: "Crypto",
-    slug: "crypto",
+    name:'Crypto',
+    slug:'crypto'
   },
   {
     id: 2,
-    name: "Business",
-    slug: "business",
+    name:'Business',
+    slug:'business'
   },
   {
     id: 3,
-    name: "Web Development",
-    slug: "web development",
+    name:'Web Development',
+    slug:'web development'
   },
   {
     id: 4,
-    name: "Entertainment",
-    slug: "entertainment",
+    name:'Entertainment',
+    slug:'entertainment'
   },
   {
     id: 5,
-    name: "Technology",
-    slug: "technology",
+    name:'Technology',
+    slug:'technology'
   },
   {
     id: 6,
-    name: "Software",
-    slug: "software",
+    name:'Software',
+    slug:'software'
   },
   {
     id: 7,
-    name: "Politics",
-    slug: "politics",
+    name:'Politics',
+    slug:'politics'
   },
   {
     id: 8,
-    name: "Gaming",
-    slug: "gaming",
+    name:'Gaming',
+    slug:'gaming'
   },
 ];
 export const tags = ["#React", "#Angular", "#CSS", "#HTML"];
@@ -114,4 +109,4 @@ export const links = [
       "Simple Explanation on Sorting Algorithms with JavaScript | Part 1 | DevCript",
     url: "https://www.devcript.com/simple-explanation-on-sorting-algorithms-with-javascript-part-1/",
   },
-];
+]
