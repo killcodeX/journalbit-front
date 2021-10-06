@@ -8,7 +8,7 @@ const openNotificationWithIcon = (type, title, message) => {
   });
 };
 
-const url =  process.env.NODE_ENV === "development"? "http://localhost:5000" : "https://journal-bit-back.vercel.app"
+const url =  process.env.NODE_ENV === "development"? "http://localhost:5000" : "https://journal-bit-back.vercel.app";
 
 export const ApiFunc = axios.create({ baseURL: url });
 
@@ -132,7 +132,7 @@ export const getunfollowerUser = async (id) => {
 
 export const getdeleteUserApi = async (id) => {
   try {
-    const { data }  = await ApiFunc.post(`/journalbit/del-user/${id}`);
+    const { data }  = await ApiFunc.delete(`/journalbit/delete-user/${id}`);
     return data
   } catch (error) {
     if (error.response) {
